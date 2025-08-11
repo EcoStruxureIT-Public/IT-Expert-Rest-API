@@ -1,0 +1,60 @@
+<!-- Copyright © 2025 Schneider Electric. All Rights Reserved.-->
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Alarms</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" href="styles.css"/>
+</head>
+
+<body>
+
+<h1>All Alarms</h1>
+
+Navigate to <a href="/">Overview</a>.
+View <a href="/inventory-objects">all inventory objects</a>.
+
+<p>
+    This page shows all the alarms currently stored in the local database.
+    Alarms that do not yet contain a value in the "Cleared Time" column, are still active.
+</p>
+
+<p>
+    Click on one of the device IDs to navigate to a page showing details about that device.
+</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>Alarm ID</th>
+        <th>Device ID</th>
+        <th>Alarm Label</th>
+        <th>Alarm Message</th>
+        <th>Alarm Severity</th>
+        <th>Activated Time</th>
+        <th>Cleared Time</th>
+        <th>Alarm Reactivation Count</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${alarms.empty}">
+        <td colspan="100">No alarms</td>
+    </tr>
+    <tr th:each="alarm : ${alarms}">
+        <td><span th:text="${alarm.id}">Id</span></td>
+        <td><a th:href="'inventory-objects/' + ${alarm.deviceId}" th:text="${alarm.deviceId}">Device Id</a></td>
+        <td><span th:text="${alarm.label}">Label</span></td>
+        <td><span th:text="${alarm.message}">Message</span></td>
+        <td><span th:text="${alarm.severity}">Severity</span></td>
+        <td><span th:text="${alarm.activatedTime}">Activated Time</span></td>
+        <td><span th:text="${alarm.clearedTime}">Cleared Time</span></td>
+        <td><span th:text="${alarm.alarmReactivationCount}">Alarm Reactivation Count</span></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>

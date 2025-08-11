@@ -1,0 +1,49 @@
+<!-- Copyright © 2025 Schneider Electric. All Rights Reserved.-->
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Alarms</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../styles.css"/>
+</head>
+
+<body>
+
+<p>
+    Navigate to <a href="/">Overview</a>.
+    View <a href="../inventory-objects">all inventory objects</a>.
+    View <a href="../alarms">all alarms</a>.
+</p>
+
+<p>
+    This page shows a hierarchy containing the <span th:text="${inventoryObjectType}"></span> with ID
+    <span th:text="${inventoryObjectId}"></span>, that you selected.
+    In the tree shown below, an arrow points to the <span th:text="${inventoryObjectType}"></span> you selected.
+</p>
+
+<p>
+    If you selected a device, and that device belongs to a composite device, then all the devices in that composite will
+    be shown
+    (a device sometimes have other devices as children and may have a single device as its parent).<br>
+    If the device has been placed in a location, then that location (and potentially that location's parent, etc.) will
+    be shown.<br>
+    All alarms associated with the devices will also be shown (prefixed by a *).
+</p>
+
+<p>
+    If you selected a location, then that location's parent location (and so on), will also be shown.<br>
+</p>
+
+<p>
+    As the root of the tree, the organization will be shown.
+</p>
+
+<hr>
+
+<pre th:text="${treeAsText}"></pre>
+
+</body>
+
+</html>

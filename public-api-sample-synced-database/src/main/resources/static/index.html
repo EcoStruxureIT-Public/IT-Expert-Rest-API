@@ -1,0 +1,92 @@
+<!-- Copyright © 2025 Schneider Electric. All Rights Reserved.-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Public API Sample Synced Database</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" href="styles.css"/>
+</head>
+
+<body>
+
+<h1>Public API Sample Synced Database</h1>
+
+<h2>Simple Web UI Showing Data Mirrored in the Local Database</h2>
+
+<p>
+    The sample application contains a few web pages.
+    The pages load data from the local database, which is in turn populated via REST calls to the API.
+    <br>
+    Access the sample web pages via these links:
+</p>
+
+<ul>
+    <li><a href="alarms">View all alarms</a></li>
+    <li><a href="inventory-objects">View all inventory objects</a></li>
+</ul>
+
+<h2>SQL Web Console for Querying the Local Database</h2>
+
+<p>
+    To access the embedded local database, open the <a href="h2-console">SQL Web Console</a>, and fill out the
+    connection info as shown below.
+</p>
+
+<p>
+    Especially make sure you use this JDBC URL: <code>jdbc:h2:mem:testdb</code>
+</p>
+
+<img src="h2-connect-screen.png">
+
+<p>
+    Some queries you may want to try out:
+</p>
+
+<pre>
+-- Information about the last requests made to the REST endpoints
+SELECT * FROM last_api_poll;
+
+-- All inventory objects (the Organization, Locations, and Devices)
+SELECT * FROM inventory_object;
+
+-- Only the Organization
+SELECT * FROM inventory_object WHERE discriminator = 'Organization';
+
+-- Only Locations
+SELECT * FROM inventory_object WHERE discriminator = 'Location';
+
+-- Only Devices
+SELECT * FROM inventory_object WHERE discriminator = 'Device';
+
+-- Only locations of type rack
+SELECT * FROM inventory_object WHERE discriminator = 'Location' AND type = 'RACK';
+
+-- All alarms
+SELECT * FROM alarm;
+
+-- Only active alarms (not yet cleared)
+SELECT * FROM alarm WHERE cleared_time IS NULL;
+
+-- Only cleared alarms (no longer active)
+SELECT * FROM alarm WHERE cleared_time IS NOT NULL;
+
+-- All alarms joined to the device on which they each occurred
+SELECT alarm.*, inventory_object.*
+FROM alarm
+INNER JOIN inventory_object ON alarm.device_id = inventory_object.id;
+
+-- Count of active alarms grouped by device and alarm severity
+SELECT device_id, severity, count(*)
+FROM alarm
+INNER JOIN inventory_object ON alarm.device_id = inventory_object.id
+WHERE cleared_time IS null AND severity NOT IN ('INFO', 'OK')
+GROUP BY device_id, severity
+ORDER BY device_id;
+
+</pre>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!-- Copyright © 2025 Schneider Electric. All Rights Reserved.-->
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Inventory Objects</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all" href="styles.css"/>
+</head>
+
+<body>
+
+<h1>All Inventory Objects</h1>
+
+<p>
+    Navigate to <a href="/">Overview</a>.
+    View <a href="alarms">all alarms</a>.
+</p>
+
+<p>
+    This page shows a list of all the inventory objects currently stored in the local database.
+    The "Discriminator" column shows the type of inventory object (Organization, Location, or Device).
+</p>
+
+<p>
+    Click on one of the IDs, Device Parent IDs, or Location Parent IDs to navigate to a page showing details about that
+    inventory object.
+</p>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Discriminator</th>
+        <th>Label</th>
+        <th>Type</th>
+        <th>Device Parent</th>
+        <th>Location Parent</th>
+        <th>Gateway IDs</th>
+        <th>Address</th>
+        <th>Warranty Expiration Date</th>
+        <th>Service Due Date</th>
+        <th>Last Service Date</th>
+        <th>Device Note</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${rows.empty}">
+        <td colspan="100">No inventory objects</td>
+    </tr>
+    <tr th:each="row : ${rows}">
+        <td><a th:href="'inventory-objects/' + ${row.id}" th:text="${row.id}">ID</a></td>
+        <td><span th:text="${row.discriminator}">Discriminator</span></td>
+        <td><span th:text="${row.label}">Label</span></td>
+        <td><span th:text="${row.type}">Type</span></td>
+        <td><a th:href="'inventory-objects/' + ${row.device_parent_id}" th:text="${row.device_parent_id}">Device Parent
+            ID</a></td>
+        <td><a th:href="'inventory-objects/' + ${row.location_parent_id}" th:text="${row.location_parent_id}">Location
+            Parent ID</a></td>
+        <td><span th:text="${row.gateway_ids}">Gateway IDs</span></td>
+        <td><span th:text="${row.address}">Address</span></td>
+        <td><span th:text="${row.warranty_expiration}">Warranty Expiration Date</span></td>
+        <td><span th:text="${row.service_due_date}">Service Due Date</span></td>
+        <td><span th:text="${row.last_service_date}">Last Service Date</span></td>
+        <td><span th:text="${row.device_note}">Device Note</span></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>

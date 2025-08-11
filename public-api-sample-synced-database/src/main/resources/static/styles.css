@@ -1,0 +1,16 @@
+/* Copyright © 2025 Schneider Electric. All Rights Reserved.*/
+body {
+    font: 13px arial, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+a:hover {
+    background-color: yellow;
+}
