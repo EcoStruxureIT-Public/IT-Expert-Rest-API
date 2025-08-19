@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import com.ecostruxureit.api.sample.client.RetriableApiException;
@@ -17,8 +18,6 @@ import org.springframework.util.backoff.BackOffExecution;
 import org.springframework.util.backoff.ExponentialBackOff;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Continuously asks {@link FetchEngine} to retrieve measurements from the REST API.
  * <p>
  * Note that we don't create an instance of this class when running tests as it would interfere with our tests if it starts a thread that

@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import generated.dto.AlarmChangesResponse;
@@ -18,9 +19,9 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
+ * The "entry point" of the application, which doesn't do anything other than starting up Spring.
  * <p>
- * Encapsulates communication with the Public API REST resources.
+ * After startup, the only actions taken by the program, are initiated by the {@link FetchTimer}, that runs a background thread.
  */
 @Service
 public class RestClient {

@@ -1,11 +1,9 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample.webui;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- */
 final class ControllerAssertions {
 
     private ControllerAssertions() {}

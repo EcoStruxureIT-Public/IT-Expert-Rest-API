@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import java.util.List;
@@ -9,10 +10,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
- */
 @Repository
 @Transactional(propagation = Propagation.MANDATORY)
 public class ReplayRepository {

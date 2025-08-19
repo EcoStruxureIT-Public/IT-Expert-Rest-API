@@ -1,4 +1,4 @@
--- Copyright © 2025 Schneider Electric. All Rights Reserved.
+-- Copyright (c) 2025 Schneider Electric. All Rights Reserved.
 -- Used to "remember" offset and the last time each type of polls were made. Also see the LastApiPoll class.
 CREATE TABLE last_api_poll
 (

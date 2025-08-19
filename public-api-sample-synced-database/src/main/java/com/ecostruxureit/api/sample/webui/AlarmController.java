@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample.webui;
 
 import com.ecostruxureit.api.sample.AlarmRepository;
@@ -7,8 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Handles the page that renders all alarms stored in the database.
  */
 @Controller

@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -21,10 +22,6 @@ import org.springframework.core.task.TaskExecutor;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
- */
 @SpringBootTest
 @ActiveProfiles(Profiles.TEST)
 @TestPropertySource(properties = {"replayEnabled=false", "batchSize=" + FetchEngineWithReplayDisabledTest.BATCH_SIZE})

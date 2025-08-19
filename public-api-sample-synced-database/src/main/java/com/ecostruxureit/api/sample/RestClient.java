@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import generated.dto.AlarmChangesResponse;
@@ -17,8 +18,6 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Encapsulates communication with the Public API REST resources.
  */
 @Service

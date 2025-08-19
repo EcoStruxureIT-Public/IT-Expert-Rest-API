@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import java.time.Duration;
@@ -10,10 +11,6 @@ import org.springframework.core.task.TaskExecutor;
 import org.springframework.core.task.support.ExecutorServiceAdapter;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
- */
 @SpringBootApplication
 public class PublicApiSampleClientApplication {
 

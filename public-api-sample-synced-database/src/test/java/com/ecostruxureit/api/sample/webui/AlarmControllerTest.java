@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample.webui;
 
 import static com.ecostruxureit.api.sample.webui.ControllerAssertions.assertContainsSubstring;
@@ -17,14 +18,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- */
 @SpringBootTest(classes = PublicApiSampleClientApplication.class, webEnvironment = WebEnvironment.RANDOM_PORT)
 @ActiveProfiles(Profiles.TEST)
 class AlarmControllerTest {
 
-    // Meant for testing REST endpoints - but works fine for retrieving HTML pages as well
+    /**
+     * Meant for testing REST endpoints - but works fine for retrieving HTML pages as well
+     */
     @Autowired
     private TestRestTemplate httpClient;
 

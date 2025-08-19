@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample.webui;
 
 import com.ecostruxureit.api.sample.AlarmRepository;
@@ -22,8 +23,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Handles the page that renders all inventory items stored in the database.
  * <p>
  * Also handles the page that shows a detailed tree in which a given inventory object is a part.

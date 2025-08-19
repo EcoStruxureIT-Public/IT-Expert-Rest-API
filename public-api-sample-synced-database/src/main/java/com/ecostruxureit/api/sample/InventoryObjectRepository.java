@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import com.google.common.collect.Sets;
@@ -26,8 +27,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Handles persistence of subtypes of {@link InventoryObject} objects in the {@code inventory_object} database table.
  * <p>
  * Also handles mapping between database {@code inventory_object} rows and Java objects - including figuring out, if a given row represents

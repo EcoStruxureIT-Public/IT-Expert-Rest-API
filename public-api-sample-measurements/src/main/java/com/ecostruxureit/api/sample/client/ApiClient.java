@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample.client;
 
 import com.ecostruxureit.api.sample.Configuration;
@@ -22,10 +23,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Service;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
- */
 @Service
 public class ApiClient {
 

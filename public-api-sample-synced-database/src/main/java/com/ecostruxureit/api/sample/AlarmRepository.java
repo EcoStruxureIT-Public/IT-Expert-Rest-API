@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import com.google.common.collect.Sets;
@@ -23,8 +24,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Handles persistence of {@link Alarm} objects in the {@code alarm} database table.
  * <p>
  * Also handles mapping between database alarm rows and Java {@link Alarm} objects.

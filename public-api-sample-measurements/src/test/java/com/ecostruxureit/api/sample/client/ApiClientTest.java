@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample.client;
 
 import static org.mockito.Mockito.when;
@@ -20,8 +21,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Makes requests to the real REST API, so turned off via the @Disabled annotation to prevent it from being run during builds of the
  * project.
  * <p>

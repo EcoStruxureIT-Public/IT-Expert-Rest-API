@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
@@ -12,10 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.Resource;
 import org.springframework.test.context.ActiveProfiles;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
- */
 @SpringBootTest
 @ActiveProfiles(Profiles.TEST)
 class SwaggerMeasurementTest {

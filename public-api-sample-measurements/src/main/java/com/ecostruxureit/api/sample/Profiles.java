@@ -1,8 +1,7 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Defines the "modes" in which the application can be run - which is basically in "test" and "not test".
  * <p>
  * All tests are annotated with {@code @ActiveProfiles(Profiles.TEST)}, which means test mode is enabled when they run.

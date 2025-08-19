@@ -1,4 +1,4 @@
--- Copyright © 2025 Schneider Electric. All Rights Reserved.
+-- Copyright (c) 2025 Schneider Electric. All Rights Reserved.
 ALTER TABLE inventory_object
     ADD COLUMN warranty_expiration DATE;
 

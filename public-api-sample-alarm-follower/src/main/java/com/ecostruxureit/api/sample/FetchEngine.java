@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import generated.dto.Alarm;
@@ -17,13 +18,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Responsible for fetching alarm changes (and the devices on which they happened) by using the {@link RestClient}.
  * <p>
  * Writes retrieved alarm changes to the console.
  * <p>
  * Is continually triggered by {@link FetchTimer} as long as the program is running.
+ * <p>
+ * Spring creates a singleton instance of this class, so there is just a single copy of this field in the application.
+ * <p>
+ * In a real application it would make sense to save the offset somewhere, so the application can continue where it
+ * left off after a restart.
  */
 @Service
 public class FetchEngine {
@@ -32,10 +36,6 @@ public class FetchEngine {
 
     private final RestClient restClient;
 
-    // Spring creates a singleton instance of this class, so there is just a single copy of this field in the
-    // application. In a real
-    // application it would make sense to save the offset somewhere, so the application can continue where it left off
-    // after a restart.
     private long currentOffset;
 
     FetchEngine(RestClient restClient) {

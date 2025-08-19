@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import jakarta.annotation.PostConstruct;
@@ -8,8 +9,6 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Creates a background thread, that continuously tells the {@link FetchEngine} to retrieve inventory objects and alarms from the REST API.
  * <p>
  * Note that we don't create an instance of this class when running tests as it would interfere with our tests if it starts a thread that

@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -20,8 +21,6 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Tests the methods in {@link AlarmRepository}.
  * <p>
  * Using the {@link Transactional} annotation on a test class means that test methods will each be run in a separate transaction, which is

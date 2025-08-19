@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import generated.dto.Alarm;
@@ -21,8 +22,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Retrieves alarms and inventory objects and decides when to do a "full" read, and when just reading recent changes are enough. Also stores
  * the retrieved data into a database.
  * <p>

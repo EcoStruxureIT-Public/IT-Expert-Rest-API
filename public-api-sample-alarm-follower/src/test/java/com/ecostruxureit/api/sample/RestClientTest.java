@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import generated.dto.AlarmChangesResponse;
@@ -19,8 +20,6 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Makes requests to the real REST API, so turned off via the Disabled annotation to prevent from being run during builds of the project.
  * <p>
  * To use you must create a file in your home directory called {@code RestClientTest.properties} with the following content:

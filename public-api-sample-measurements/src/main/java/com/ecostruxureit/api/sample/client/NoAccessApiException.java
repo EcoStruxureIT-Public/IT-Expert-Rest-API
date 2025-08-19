@@ -1,9 +1,6 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample.client;
 
-/**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
- */
 public final class NoAccessApiException extends ApiException {
 
     public NoAccessApiException() {

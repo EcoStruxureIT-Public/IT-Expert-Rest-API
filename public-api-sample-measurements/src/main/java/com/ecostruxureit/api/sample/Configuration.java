@@ -1,3 +1,4 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import jakarta.annotation.PostConstruct;
@@ -14,8 +15,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Handles configuration of the application, e.g., API key, organization ID, and optionally API URL.
  * <p>
  * Logs if required configuration attributes have not been set.

@@ -1,10 +1,9 @@
+/* Copyright (c) 2025 Schneider Electric. All Rights Reserved. */
 package com.ecostruxureit.api.sample;
 
 import java.time.Instant;
 
 /**
- * Copyright © 2025 Schneider Electric. All Rights Reserved.
- * <p>
  * Two instances of this object is stored in the database in the {@code last_api_poll} table.
  * <p>
  * The instances each contain information about when the data was last retrieved from the REST endpoint - one about when alarms were last
